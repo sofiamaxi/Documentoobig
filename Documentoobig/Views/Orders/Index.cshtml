@@ -1,0 +1,102 @@
+﻿
+
+
+@model IEnumerable<Documentoobig.Models.Orders>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>
+    Відправлення
+</h1>
+
+<p>
+    @Html.ActionLink("Створити нове відправлення", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Замовник
+        </th>
+        <th>
+            Місто відправлення
+        </th>
+        <th>
+            Відділення відправлення
+        </th>
+        <th>
+            Отримувач
+        </th>
+        <th>
+            Працівник
+        </th>
+        <th>
+            Місто отримання
+        </th>
+        <th>
+            Відділення отримання
+        </th>
+        <th>
+            Обєм
+        </th>
+        <th>
+            Вага
+        </th>
+         <th>
+            Оголошена вартість
+        </th>
+         <th>
+            Ціна доставки
+        </th>     
+         
+        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.From.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDep.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Receiver.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.To.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDep.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume) см.куб
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight) кг
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost) грн
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) грн
+            </td>
+            <td>
+                @Html.ActionLink("Редагувати", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Переглянути", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Видалити", "Delete", new { id = item.Id }) |
+                @Html.ActionLink("Створити документ", "CreateDocument", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

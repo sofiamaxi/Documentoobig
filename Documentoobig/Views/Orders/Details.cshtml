@@ -1,0 +1,114 @@
+﻿@model Documentoobig.Models.Orders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.From.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.From.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDep.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDep.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receiver.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receiver.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Staff.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.To.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.To.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDep.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDep.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
